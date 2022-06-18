@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 11fb4188071428b4791eb925bf66f026
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - GameOverScreen: {fileID: 8627496455526587660, guid: 7409e04e2a94cfd4cb65c3344273c1b3, type: 3}
+  - wallVoxel: {fileID: 4475095065837084504, guid: 7dafecc0eb59f774986d85c112035eb5, type: 3}
+  - shoot: {instanceID: 0}
+  - explosion: {fileID: 100004, guid: 6e8c7c425e5bc374daf95a774767b1e3, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

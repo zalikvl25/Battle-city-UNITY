@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: bfc06d462391c31478cbaddf5b022229
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bedrockVoxel: {fileID: 5184123424708852449, guid: de545211d4e6d3f4cb48ab5a781b8bb6, type: 3}
+  - wallVoxel: {fileID: 4475095065837084504, guid: 7dafecc0eb59f774986d85c112035eb5, type: 3}
+  - eagleVoxel: {fileID: 5846946075952032399, guid: d70c9437e2ea2484aac9b37e676d81be, type: 3}
+  - playerPrefab: {fileID: 1552909550251392393, guid: 7296fed94b313c644ba3dd4225f5fd9f, type: 3}
+  - enemyPrefab: {fileID: 1552909550251392393, guid: 9d635e0a75fd5e248aad04fa1b16db2d, type: 3}
+  - mainCamera: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
