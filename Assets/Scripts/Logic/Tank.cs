@@ -124,17 +124,16 @@ namespace Assets.Scripts.Logic
 
         private void Rebirth()
         {
-            while (cells[j + 1, i + 1].Occupant != null )
+            var p = GetCoords();
+            if (p.x == j + 1 && p.y == i + 1)
+            { }
+            else 
             {
-                var enemy = cells[j + 1, i + 1].Occupant.GetComponent<EnemyAI>();
-                if (cells[j + 2, i + 1].Occupant != null)
-                { enemy.TryMove(Vector2Int.right); }
-                else { enemy.TryMove(Vector2Int.down); }
-                    
-            };
+                cells[p.x, p.y].Occupy(null);
+                cells[j + 1, i + 1].Occupy(this);
+            }
             var fx = Instantiate(mana, new Vector3(j + 1, 1, i + 1), Quaternion.identity);
             Destroy(fx, 3);
-            cells[j+1, i+1].Occupy(this);
             gameObject.transform.position = new Vector3(j+1, 1, i+1);
             if (life != null)
             { life.Play(); }
@@ -154,15 +153,14 @@ namespace Assets.Scripts.Logic
             if (MusicDie != null)
             { MusicDie.Play(); }
             var fx = Instantiate(explosion, new Vector3(p.x, 1, p.y), Quaternion.identity);
-            cells[p.x, p.y].Occupy(null);
-            
             if (rebirth)
             {
-                StartCoroutine(ExecuteAfterTime(2));
+                StartCoroutine(ExecuteAfterTime(1));
             }
             else 
             {
                 StopAllCoroutines();
+                cells[p.x, p.y].Occupy(null);
                 Destroy(gameObject, 2);
             }
             Destroy(fx, 3);

@@ -40,7 +40,7 @@ namespace Assets.Scripts.Logic
 				}
 				yield return TryMove(mydirection);
 			}
-			while (true)
+			while (Timer.timeStart < 120)
 			{
 				var howToMove = UnityEngine.Random.Range(0, 2);
 				if (howToMove == 0)
@@ -60,11 +60,23 @@ namespace Assets.Scripts.Logic
 				}
 				yield return TryMove(mydirection);
 			}
-			/*while (true)
-			{ 
-				mydirection = MoveToPosition(eagleBase.position);
+			while (true)
+			{
+				var howToMove = UnityEngine.Random.Range(0, 5);
+				if (howToMove == 0)
+				{
+					var whereToMove = new List<Vector2Int>()
+				{
+					Vector2Int.left, Vector2Int.right, Vector2Int.up, Vector2Int.down
+				};
+					mydirection = whereToMove[UnityEngine.Random.Range(0, whereToMove.Count)];
+				}
+				else
+				{
+					mydirection = MoveToPosition(eagleBase.position);
+				}
 				yield return TryMove(mydirection);
-			}*/
+			}
 		}
 
 		public IEnumerator TryFire()
